@@ -55,7 +55,9 @@ Blurb
 
 .template_blurb_text2 {
     font-size: 16px;
-    margin-left: 30%;}
+    margin-left: 27%;
+    margin-top: 35px;
+}
 
 .template_blurb_mask {
     margin-top:2%;

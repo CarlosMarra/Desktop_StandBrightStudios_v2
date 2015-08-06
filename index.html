@@ -14,11 +14,11 @@
 
     <!---custom CSS and JS-->
     <link rel="stylesheet" href="styles.css" type="text/css" charset="utf-8">
-    <link rel="stylesheet" href="styles_res.css" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
     
     <!-- bxSlider Javascript file -->
     <script src="jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script src="froogaloop.min.js"></script>
     <!-- bxSlider CSS file -->
     <link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
 </head>
@@ -38,7 +38,9 @@
     <div class="template_front">
             <div class="template_front_divs">
                 <div class="template_front_rectangles">
-                    <iframe frameborder="0" width="960" height="540" src="https://player.vimeo.com/video/128739721?color=ff005a&title=0&byline=0&portrait=0"></iframe>
+                    <div class="masked_imaging">
+                    <img  class="masked_image" id="masked_image" alt="sbs_icon" src="images/video_logo.png" /></div>
+                    <iframe class="revealed_video hide" id="revealed_video" frameborder="0" width="960" height="540" src="https://player.vimeo.com/video/128739721?color=ff005a&title=0&byline=0&portrait=0"></iframe>
                 </div>
             </div>
     </div>
@@ -59,7 +61,7 @@
             <p class="template_blurb_text">Let’s make a difference together and get people excited!</p>
 
             <p class="template_blurb_text2"><br>
-            “When you are ready to work with us, we will be here for you.” - Sidney S. Marra
+            <i>“When you are ready to work with us, we will be here for you.” </i> - Sidney S. Marra
             CEO</p>
         </div>
     </div>
@@ -107,7 +109,7 @@
                                 <p class="template_slide1_list_title">CATEGORIES</p>
 
                                 <p class="template_slide1_list_content">Mobile Apps & Games,
-                                Children's Books Illustrations, TV Pitches, Cinematic Game
+                                Children's Book Illustrations, TV Pitches, Cinematic Game
                                 Trailers, Book Trailers</p>
                             </div>
                         </div>
@@ -130,8 +132,8 @@
                     <div class="template_slide2_information">
                         
                         <p class="template_slide2_intro">PRESENTATION READY</p>
-                        <p class="template_slide2_middle">Are you pitching a new product? Do you need to train a new employee? Do you want to share your product on social media?</p>
-                        <p class="template_slide2_end">NO PROBLEM, WE GOT YOU COVERED</p>
+                        <p class="template_slide2_middle">Pitching a new product? Need to train a new employee? Want to share your product on social media?</p>
+                        <p class="template_slide2_end">NO PROBLEM! WE GOT YOU COVERED.</p>
 
                         <div class="template_slide2_list">
                             <p class="template_slide2_list_title">VIDEO PRODUCTION SERVICES</p>
@@ -177,7 +179,7 @@
                     <div class="template_slide3_information">
                         
                         <p class="template_slide3_intro">CREATIVE MARKETING</p>
-                        <p class="template_slide3_middle">Capture the attention of your audience! Videos are a great way to spread your message across all social media platforms.</p>
+                        <p class="template_slide3_middle">Capture the attention of your audience! Videos are a great way to spread your message across all social media.</p>
 
                         <div class="template_slide3_list">
                             <p class="template_slide3_list_title">ANIMATION SERVICES</p>
@@ -192,104 +194,6 @@
 
             </div>
             </li>
-
-            <li>
-            <div class="template_slide4">
-                <p class="template_slide4_text">SERVICES</p>
-
-                <div class="template_slide4_concept_body">
-      
-                    <div class="template_list_Structure">
-                        <div class="template_slide4_list_title">
-                            <div class="template_slide4_list_name">
-                                <p>Arististic Medium</p>
-                            </div>
-                            <div class="template_slide4_list_break">
-                                <div class="template_slide4_line"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="template_slide4_list_title">
-                            <div class="template_slide4_list_empty">
-                            
-                            </div>
-                            <div class="template_slide4_list_services">
-                                <ul>
-                                    <li>Motion Grapics</li>
-                                    <li>2D Animation</li>
-                                    <li>3D Animation</li>
-                                    <li>Stop Motion</li>
-                                    <li>Live Action</li>
-                                    <li>Book Illustrations</li>
-                                    <li>Concept Art</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-
-
-                    <div class="template_list_Structure">
-                        <div class="template_slide4_list_title">
-                            <div class="template_slide4_list_name">
-                                <p>Video Category</p>
-                            </div>
-                            <div class="template_slide4_list_break">
-                                <div class="template_slide4_line"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="template_slide4_list_title">
-                            <div class="template_slide4_list_empty">
-                            
-                            </div>
-                            <div class="template_slide4_list_services">
-                                <ul>
-                                    <li>Commercials</li>
-                                    <li>Promotional</li>
-                                    <li>Explainer</li>
-                                    <li>Training</li>
-                                    <li>Music</li>
-                                    <li>Trailers</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-         
-                    <div class="template_list_Structure">
-                        <div class="template_slide4_list_title">
-                            <div class="template_slide4_list_name">
-                                <p>Video Content</p>
-                            </div>
-                            <div class="template_slide4_list_break">
-                                <div class="template_slide4_line"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="template_slide4_list_title">
-                            <div class="template_slide4_list_empty">
-                            
-                            </div>
-                            <div class="template_slide4_list_services">
-                                <ul>
-                                    <li>Corporate</li>
-                                    <li>Technology</li>
-                                    <li>Education</li>
-                                    <li>Finance</li>
-                                    <li>Products</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-         
-
-
-                    </div>
-                </div>
-            </div>
-            </li>
         </ul>
 
         <div></div>
@@ -300,28 +204,28 @@
         <div class="template_icons_process">
             <ul class="template_icons_steps">
                 <li class="template_icons_icons">                  
-                    <label class="template_icons_step_stones">CONCEPT</label><br>
+                    <label class="template_icons_step_stones template_icons_step_stones1">CONCEPT</label><br>
                     <figure>
                         <img class="template_icons_type1" alt="process" src="images/concept.png">      
                         <figcaption><br> Have an idea? Great! <br> Create a script.  </figcaption>
                     </figure>
                 </li>
                 <li class="template_icons_icons">                  
-                    <label class="template_icons_step_stones">STYLE</label><br>
+                    <label class="template_icons_step_stones template_icons_step_stones2">STYLE</label><br>
                     <figure>
                         <img class="template_icons_type1" alt="process" src="images/style.png">        
                         <figcaption><br>A range of styles are sent based on your preference.</figcaption>
                     </figure>
                 </li>
                 <li class="template_icons_icons">                  
-                    <label class="template_icons_step_stones">STORYBOARD</label><br>
+                    <label class="template_icons_step_stones template_icons_step_stones3">STORYBOARD</label><br>
                     <figure>
                         <img class="template_icons_type2" alt="process" src="images/storyboard.png">       
                         <figcaption><br>Creating storyboards is the best way to visually plan out the entire video </figcaption>
                     </figure>
                 </li>
                 <li class="template_icons_icons nope">                 
-                    <label class="template_icons_step_stones">PRODUCTION</label><br>
+                    <label class="template_icons_step_stones template_icons_step_stones4">PRODUCTION</label><br>
                     <figure>
                         <img class="template_icons_type2" alt="process" src="images/production.png">       
                         <figcaption><br>Once the previous steps are approved, we take action.</figcaption>
@@ -342,9 +246,13 @@
                         <label class="template_contact_categories">ARTISTIC STYLE</label><br>
                         <select class="template_contact_menus" id="artistic_style" name="artistic_style" type="text">                               
                             <option value="" selected>Select your option</option>
-                            <option value="Social Media">3D Animation</option>
+                            <option value="Social Media">Motion Graphics</option>
                             <option value="Social Media">2D Animation</option>
+                            <option value="Social Media">3D Animation</option>
+                            <option value="Social Media">Stop Motion</option>
                             <option value="Social Media">Live Action</option>
+                            <option value="Social Media">Book Illustrations</option>
+                            <option value="Social Media">Concept Art</option>
                         </select>                               
                     </li>
 
@@ -352,9 +260,12 @@
                         <label class="template_contact_categories">VIDEO CATEGORY</label><br>
                         <select class="template_contact_menus" id="video_category" name="video_category" type="text">                               
                             <option value="" selected>Select your option</option>
-                            <option value="Social Media">3D Animation</option>
-                            <option value="Social Media">2D Animation</option>
-                            <option value="Social Media">Live Action</option>
+                            <option value="Social Media">Commercials</option>
+                            <option value="Social Media">Promotional</option>
+                            <option value="Social Media">Explainer</option>
+                            <option value="Social Media">Training</option>
+                            <option value="Social Media">Music</option>
+                            <option value="Social Media">Trailers</option>
                         </select>                               
                     </li>
 
@@ -362,9 +273,11 @@
                         <label class="template_contact_categories">VIDEO CONTENT</label><br>
                         <select class="template_contact_menus" id="video_content" name="video_content" type="text">                               
                             <option value="" selected>Select your option</option>
-                            <option value="Social Media">3D Animation</option>
-                            <option value="Social Media">2D Animation</option>
-                            <option value="Social Media">Live Action</option>
+                            <option value="Social Media">Corporate</option>
+                            <option value="Social Media">Technology</option>
+                            <option value="Social Media">Education</option>
+                            <option value="Social Media">Finance</option>
+                            <option value="Social Media">Products</option>
                         </select>    
                     </li>
                 </ul> 
@@ -398,16 +311,16 @@
 
                     <li class="template_contact_dropdown_section">
                         <label class="template_contact_categories">BUDGET</label><br>
-                        <input class="template_contact_menus" id="company_budget" name="company_budget" type="text" placeholder="$50000">                               
+                        <input class="template_contact_menus" id="company_budget" name="company_budget" type="text" placeholder="$3600">                               
                     </li>
 
                     <li class="template_contact_dropdown_section">
                         <label class="template_contact_categories">HOW YOU FOUND US</label><br>
                         <select class="template_contact_menus" id="company_know" name="company_know" type="text">                               
                             <option value="" selected>Select your option</option>
-                            <option value="Social Media">3D Animation</option>
-                            <option value="Social Media">2D Animation</option>
-                            <option value="Social Media">Live Action</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Social Media">Aimee (EU contact)</option>
+                            <option value="Social Media">Rachel (NA contact)</option>
                         </select>    
                     </li>
                 </ul>   
@@ -449,18 +362,17 @@
     <div class="template_footer"> 
         <div class="template_footer_complete">
             <div class="template_footer_footer">
-                <ul>
-                    <li class="template_footer_email">HELLO@STANDBRIGHTSTUDIOS.COM</li>
-                    <li class="template_footer_num">516-724-4456</li>
-                    <li class="template_footer_add">BROOKLYN, NY</li>
-                </ul>       
+                <p class="template_footer_text">HELLO@STANDBRIGHTSTUDIOS.COM</p>
+                    <p class="template_footer_text">516-724-4456 | BROOKLYN, NY</p>
             </div>
-            <div class="template_footer_footer_icons">
-                <img class="template_footer_social_icons" alt="socials" src="images/facebook.png"/>
-                <img class="template_footer_social_icons" alt="socials" src="images/twitter.png"/>
-                <img class="template_footer_social_icons" alt="socials" src="images/tumblr.png"/>
-                <img class="template_footer_social_icons" alt="socials" src="images/instagram.png"/>
-                <img class="template_footer_social_icons" alt="socials" src="images/vimeo.png"/>
+            <div class="template_footer_row">
+                <div class="template_footer_footer_icons">
+                    <img class="template_footer_social_icons" alt="socials" src="images/facebook.png"/>
+                    <img class="template_footer_social_icons" alt="socials" src="images/twitter.png"/>
+                    <img class="template_footer_social_icons" alt="socials" src="images/tumblr.png"/>
+                    <img class="template_footer_social_icons" alt="socials" src="images/instagram.png"/>
+                    <img class="template_footer_social_icons" alt="socials" src="images/vimeo.png"/>
+                </div>
             </div>
         </div>
     </div>

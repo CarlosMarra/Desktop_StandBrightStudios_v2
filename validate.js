@@ -2,10 +2,19 @@ $(document).ready(function() {
 	
 
 	$('.bxslider').bxSlider({ 
+		        wrapperClass: 'bx-wrapper home-slider',
+
 
 		onSliderLoad: function(){
  		jQuery('video').trigger('play');
   		}
+
+  	});
+
+  	$(".masked_image").click(function() {
+		  	$(".masked_imaging").addClass('hide');
+		  	$(".revealed_video").removeClass('hide');
+			document.getElementById('revealed_video').src = "https://player.vimeo.com/video/128739721?color=ff005a&title=0&byline=0&portrait=0&autoplay=1";
 
   	});
 
@@ -150,8 +159,10 @@ if (($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -7652, 0)') ||
 	($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -5732, 0)') ||
 	($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -5572, 0)') ||
 	($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -5436, 0)') ||
+	($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -5412, 0)') ||
 	($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -5092, 0)') ||
 	($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -4580, 0)') ||
+	($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -5444, 0)') ||
 	($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -4068, 0)')) {
   	      
      $( ".template_slide4_line").addClass("template_animations");
@@ -161,19 +172,114 @@ if (($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -7652, 0)') ||
 }, 1);
 
 
+	var canSee = false;
 
 setInterval(function () {
-
 	var b_height = screen.height;
 	var x = $('.template_icons_step_stones').offset().top;
 	var y = x - b_height;
+	if ( y < -500 && canSee === false){
+	canSee = true;
 
-	if ( y < -200){
-		$('.template_icons_step_stones').animate({'opacity':'1'},1000);
+		      	$( ".template_icons_step_stones1" ).animate({		//aniamtes "dragged out" slides back into position with new z-index values
+	    			'opacity':'1', 
+	    			'margin-left':'0px'
+	  			}, {
+			    	duration: 250,							//1ms as these slides are hidden within the top layer
+			    	specialEasing: {
+			      	width: "linear",					
+			    	},
+			    	complete: function() {					//re-enabled buttons
+				      	$( ".template_icons_step_stones2" ).animate({		//aniamtes "dragged out" slides back into position with new z-index values
+			    			'opacity':'1', 
+			    			'margin-left':'0px',
+			  			}, {
+					    	duration: 250,							//1ms as these slides are hidden within the top layer
+					    	specialEasing: {
+					      	width: "linear",					
+					    	},
+					    	complete: function() {					//re-enabled buttons
+						      	$( ".template_icons_step_stones3" ).animate({		//aniamtes "dragged out" slides back into position with new z-index values
+					    			'opacity':'1', 
+					    			'margin-left':'0px'
+					  			}, {
+							    	duration: 250,							//1ms as these slides are hidden within the top layer
+							    	specialEasing: {
+							      	width: "linear",					
+							    	},
+							    	complete: function() {					//re-enabled buttons
+								      	$( ".template_icons_step_stones4" ).animate({		//aniamtes "dragged out" slides back into position with new z-index values
+							    			'opacity':'1', 
+							    			'margin-left':'0px'
+							  			}, {
+									    	duration: 250,							//1ms as these slides are hidden within the top layer
+									    	specialEasing: {
+									      	width: "linear",					
+									    	},
+									    	complete: function() {					//re-enabled buttons
+									    	}
+							    		});
+							    	}
+					    		}); 
+ 					    	}
+			    		});
+			    	}
+	    		});
+	}
+	else if ( y >= -500 && canSee == true){
+			
+			canSee = false;
+
+
+		      	$( ".template_icons_step_stones4" ).animate({		//aniamtes "dragged out" slides back into position with new z-index values
+	    			'opacity':'0', 
+	    			'margin-left':'-100px'
+	  			}, {
+			    	duration: 250,							//1ms as these slides are hidden within the top layer
+			    	specialEasing: {
+			      	width: "linear",					
+			    	},
+			    	complete: function() {					//re-enabled buttons
+				      	$( ".template_icons_step_stones3" ).animate({		//aniamtes "dragged out" slides back into position with new z-index values
+			    			'opacity':'0', 
+			    			'margin-left':'-100px'
+			  			}, {
+					    	duration: 250,							//1ms as these slides are hidden within the top layer
+					    	specialEasing: {
+					      	width: "linear",					
+					    	},
+					    	complete: function() {					//re-enabled buttons
+						      	$( ".template_icons_step_stones2" ).animate({		//aniamtes "dragged out" slides back into position with new z-index values
+					    			'opacity':'0', 
+					    			'margin-left':'-100px'
+					  			}, {
+							    	duration: 250,							//1ms as these slides are hidden within the top layer
+							    	specialEasing: {
+							      	width: "linear",					
+							    	},
+							    	complete: function() {					//re-enabled buttons
+								      	$( ".template_icons_step_stones1" ).animate({		//aniamtes "dragged out" slides back into position with new z-index values
+							    			'opacity':'0', 
+							    			'margin-left':'-100px'
+							  			}, {
+									    	duration: 250,							//1ms as these slides are hidden within the top layer
+									    	specialEasing: {
+									      	width: "linear",					
+									    	},
+									    	complete: function() {					//re-enabled buttons
+									    	}
+							    		});
+							    	}
+					    		}); 
+ 					    	}
+			    		});
+			    	}
+	    		});
+
+
+
 	}
 
-	
+
 }, 10);
-
-
 
