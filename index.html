@@ -2,25 +2,59 @@
 
 <html lang="en">
 <head>
-    <title>Page Title</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="robots" content="NOODP"/>
+    <meta name="googlebot" content="NOODP"/>
+    <meta name="description" content="Stand Bright Studios is an animation studio that can provide a multitude of services within the industry. Feel free to contact the team or partake in our newsletter and start the conversation at hello@standbrightstudios.com!".>
+    <meta name="keywords" content="Stand, Bright, Studios, person, StandBrightStudios, What, We, Do, The, Team, Contact, Us, Newsletter, hello@standbrightstudios.com, Company"/>
+    <meta name="author" content="Carlos Marra".>
+
+    <title>Stand Bright Studios</title>
+
+    <!-- for FF, Chrome, Opera -->
+    <link rel="icon" type="image/png" href="images/logo.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+    
+    <!-- for IE -->
+    <link rel="icon" type="image/x-icon" href="images/logo.ico" >
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico"/>
+
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="froogaloop.min.js"></script>
 
     <!---the boilerplates of bootstrap-->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
     <!---custom CSS and JS-->
-    <link rel="stylesheet" href="styles.css" type="text/css" charset="utf-8">
-    <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="styles_complete.min.css" type="text/css" charset="utf-8">
     
+    <!--
+    <link rel="stylesheet" href="styles.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="styles_res_1680.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="styles_res_1600.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="styles_res_1440.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="styles_res_1400.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="styles_res_1360.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="styles_res_1280.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="styles_res_1152.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="styles_res_1024.css" type="text/css" charset="utf-8">
+    --> 
+
+    <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+
     <!-- bxSlider Javascript file -->
     <script src="jquery.bxslider/jquery.bxslider.min.js"></script>
-    <script src="froogaloop.min.js"></script>
     <!-- bxSlider CSS file -->
     <link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+
 </head>
 
 <body>
@@ -36,26 +70,37 @@
     </div>
 
     <div class="template_front">
+                <div class="template_front_left"></div>
+
             <div class="template_front_divs">
+
+                
                 <div class="template_front_rectangles">
                     <div class="masked_imaging">
                     <img  class="masked_image" id="masked_image" alt="sbs_icon" src="images/video_logo.png" /></div>
                     <iframe class="revealed_video hide" id="revealed_video" frameborder="0" width="960" height="540" src="https://player.vimeo.com/video/128739721?color=ff005a&title=0&byline=0&portrait=0"></iframe>
                 </div>
+
+
+
             </div>
+                        <div class="template_front_right"></div>
+
     </div>
     
     <div class="template_blurb">
         <div class="template_blurb_mask">
             <div class="template_blurb_logo">
-                <img alt="logo" class="logos" src="images/logo.png">
+                <video class="flameon" width="100" height="100" autoplay muted loop>
+                    <source src="videos/flame.mp4" type="video/mp4">
+                </video>            
             </div>
 
             <p class="template_blurb_text"><br>
             We partner with clients to create stunning animations. We do our best to take ideas and
             bring them to the next level.</p>
 
-            <p class="template_blurb_text">The award-winning designers, animators and story tellers make this
+            <p class="template_blurb_text">Our award-winning designers, animators and story tellers make this
             happen.</p>
 
             <p class="template_blurb_text">Let’s make a difference together and get people excited!</p>
@@ -67,13 +112,6 @@
     </div>
 
     <div class="clear"></div>
-<!--
-    <slides-two></slides-two>
-    <icons-three></icons-three>
-    <contact-four></contact-four>
-    <newsletter-five></newsletter-five>
-    <iframe class="iframe" src="iframe.html" frameborder="0"></iframe>
--->
 
     <div class="what_we_do">
         <ul class="bxslider">
@@ -102,13 +140,13 @@
                                 <p class="template_slide1_list_title">CONCEPT ART SERVICES</p>
 
                                 <p class="template_slide1_list_content">Character Design,
-                                Environment Design, Prop Design, Storyboards, Animatics</p>
+                                Environment Design, Prop Design</p>
                             </div>
 
                             <div class="template_slide1_list">
                                 <p class="template_slide1_list_title">CATEGORIES</p>
 
-                                <p class="template_slide1_list_content">Mobile Apps & Games,
+                                <p class="template_slide1_list_content">Animation, Mobile Apps & Games,
                                 Children's Book Illustrations, TV Pitches, Cinematic Game
                                 Trailers, Book Trailers</p>
                             </div>
@@ -125,7 +163,7 @@
                     <div class="template_slide2_picture">
                         <div class="template_slide2_corporate_placehoder">
                             <video width="960" height="540" autoplay muted loop>
-                                <source src="videos/jpf.mp4" type="video/mp4">
+                                <source src="videos/corps.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -145,13 +183,13 @@
                             <div class="template_slide2_sharing_buttons">
                                 <ul class="template_slide2_icon_list">
                                     <li class="template_slide2_icons">
-                                        <img alt="socials" src="images/facebook.png" />
+                                        <a href="https://www.facebook.com/pages/Stand-Bright-Studios/1568394150088377?fref=ts"><img alt="socials" src="images/facebook.png" /></a>
                                     </li>
                                     <li class="template_slide2_icons">
-                                        <img alt="socials" src="images/twitter.png" />
+                                        <a href="https://twitter.com/Stand_Brightly"><img alt="socials" src="images/twitter.png" /></a>
                                     </li>
                                     <li class="template_slide2_icons">
-                                        <img alt="socials" src="images/tumblr.png" />
+                                        <a href="http://standbrightstudios.tumblr.com/"><img alt="socials" src="images/tumblr.png" /></a>
                                     </li>
                                     <li class="template_slide2_icons">
                                         <img alt="socials" src="images/instagram.png" />
@@ -172,7 +210,7 @@
                     <div class="template_slide3_picture">
                         <div class="template_slide3_concept_placehoder">
                             <video width="960" height="540" autoplay muted loop>
-                                <source src="videos/jpf.mp4" type="video/mp4">
+                                <source src="videos/v_prod.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -243,49 +281,6 @@
             <div class="template_contact_row">
                 <ul class="template_contact_real">
                     <li class="template_contact_dropdown_section">
-                        <label class="template_contact_categories">ARTISTIC STYLE</label><br>
-                        <select class="template_contact_menus" id="artistic_style" name="artistic_style" type="text">                               
-                            <option value="" selected>Select your option</option>
-                            <option value="Social Media">Motion Graphics</option>
-                            <option value="Social Media">2D Animation</option>
-                            <option value="Social Media">3D Animation</option>
-                            <option value="Social Media">Stop Motion</option>
-                            <option value="Social Media">Live Action</option>
-                            <option value="Social Media">Book Illustrations</option>
-                            <option value="Social Media">Concept Art</option>
-                        </select>                               
-                    </li>
-
-                    <li class="template_contact_dropdown_section">
-                        <label class="template_contact_categories">VIDEO CATEGORY</label><br>
-                        <select class="template_contact_menus" id="video_category" name="video_category" type="text">                               
-                            <option value="" selected>Select your option</option>
-                            <option value="Social Media">Commercials</option>
-                            <option value="Social Media">Promotional</option>
-                            <option value="Social Media">Explainer</option>
-                            <option value="Social Media">Training</option>
-                            <option value="Social Media">Music</option>
-                            <option value="Social Media">Trailers</option>
-                        </select>                               
-                    </li>
-
-                    <li class="template_contact_dropdown_section">
-                        <label class="template_contact_categories">VIDEO CONTENT</label><br>
-                        <select class="template_contact_menus" id="video_content" name="video_content" type="text">                               
-                            <option value="" selected>Select your option</option>
-                            <option value="Social Media">Corporate</option>
-                            <option value="Social Media">Technology</option>
-                            <option value="Social Media">Education</option>
-                            <option value="Social Media">Finance</option>
-                            <option value="Social Media">Products</option>
-                        </select>    
-                    </li>
-                </ul> 
-                <div class="clear"></div>                                             
-            </div>
-            <div class="template_contact_row">
-                <ul class="template_contact_real">
-                    <li class="template_contact_dropdown_section">
                         <label class="template_contact_categories">NAME</label><br>
                         <input class="template_contact_menus" id="person_name" name="person_name" type="text" placeholder="Bruce Wayne">                               
                     </li>
@@ -330,7 +325,7 @@
                 <ul class="template_contact_real">
                     <li class="template_contact_dropdown_additional">
                         <label class="template_contact_categories" style="text-align: left!important">ADDITIONAL NOTES<br>
-                        <textarea class="template_contact_text2 template_contact_textarea" id="company_details" name="company_details" placeholder="Example Details: project type, scope, timeline, etc." type="text"></textarea> 
+                        <textarea class="template_contact_text2 template_contact_textarea" id="company_details" name="company_details" placeholder="Example Details: artistic style, video content, timeline, etc." type="text"></textarea> 
                     </li>
                     <li class="template_contact_dropdown_button">
                         <button class="template_contact_submit" type="submit" form="contact_submit" id="submit" name="submit">SUBMIT</button>
@@ -343,18 +338,20 @@
 
 
     <div class="template_newsletter">
+       
+        <form action="server.php" id="news_submit" method="POST">
+            <div class="template_newsletter_content">
 
-        <div class="template_newsletter_content">
+                <p class="template_newsletter_text">Subscribe to our Newsletter!</p>
+                
+                <div class="template_newsletter_news">
+                    <input class="template_newsletter_info_email" type="text" id="mail" name="mail" placeholder="your@email.com"/>
+                    <button class="template_newsletter_info_sub"  type="submit" form="news_submit" id="submit_news" name="submit_news">SUBMIT</button>
+                </div>
+                <div class="clear"></div>
 
-            <p class="template_newsletter_text">Subscribe to our Newsletter!</p>
-            
-            <div class="template_newsletter_news">
-                <input class="template_newsletter_info_email" type="text" placeholder="your@email.com"/>
-                <button class="template_newsletter_info_sub">SUBMIT</button>
             </div>
-            <div class="clear"></div>
-
-        </div>
+        </form>
 
     </div>
 
@@ -367,9 +364,9 @@
             </div>
             <div class="template_footer_row">
                 <div class="template_footer_footer_icons">
-                    <img class="template_footer_social_icons" alt="socials" src="images/facebook.png"/>
-                    <img class="template_footer_social_icons" alt="socials" src="images/twitter.png"/>
-                    <img class="template_footer_social_icons" alt="socials" src="images/tumblr.png"/>
+                    <a href="https://www.facebook.com/pages/Stand-Bright-Studios/1568394150088377?fref=ts"><img class="template_footer_social_icons" alt="socials" src="images/facebook.png"/></a>
+                    <a href="https://twitter.com/Stand_Brightly"><img class="template_footer_social_icons" alt="socials" src="images/twitter.png"/></a>
+                    <a href="http://standbrightstudios.tumblr.com/"><img class="template_footer_social_icons" alt="socials" src="images/tumblr.png"/></a> 
                     <img class="template_footer_social_icons" alt="socials" src="images/instagram.png"/>
                     <img class="template_footer_social_icons" alt="socials" src="images/vimeo.png"/>
                 </div>

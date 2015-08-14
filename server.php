@@ -1,11 +1,7 @@
 <?php
 
-if (isset($_POST["contact_submit"])){
-
-
-    $a_style= trim(stripslashes(htmlspecialchars($_POST['artistic_style'])));          
-    $v_category= trim(stripslashes(htmlspecialchars($_POST['video_category'])));          
-    $v_content= trim(stripslashes(htmlspecialchars($_POST['video_content'])));          
+if (isset($_POST["submit"])){
+          
     $p_name = trim(stripslashes(htmlspecialchars($_POST['person_name']))); 
     $c_name= trim(stripslashes(htmlspecialchars($_POST['company_name'])));          
     $c_email = trim(stripslashes(htmlspecialchars($_POST['company_email'])));         
@@ -14,20 +10,17 @@ if (isset($_POST["contact_submit"])){
     $c_know= trim(stripslashes(htmlspecialchars($_POST['company_know'])));     
     $c_details= trim(stripslashes(htmlspecialchars($_POST['company_details'])));     
 
-    $emaillist = 'sidney@standbrightstudios.com, omer@standbrightstudios.com, aphymas@gmail.com, findme@carlosamarra.com';
+    $emaillist = 'sidney@standbrightstudios.com, findme@carlosamarra.com';
     
                 $to      = $c_email;
                 $subject = $c_name." inquired about a video.";
                 $message = "<html><body>";
                 $message .= "<table>";
                 $message .= "<tr><th colspan=2 style='background-color: #405159; color: #CFF0FF; padding: 20px; font-family:Verdana,Geneva,sans-serif; font-weight: bold; font-size: 30px;'>Stand Bright Studios Recipt</th></tr>";
-                $message .= "<tr style='color: #405159; font-family:Verdana,Geneva,sans-serif; font-weight: bold;'><td style='padding: 10px;'>Contact Name</td><td>$p_name</td></tr>";
-                $message .= "<tr style='background-color: #CFF0FF; color: #405159; font-family:Verdana,Geneva,sans-serif; font-weight: bold;'><td style='padding: 10px;'>Animation-style</td><td>$a_style</td></tr>";
-                $message .= "<tr style='color: #405159; font-family:Verdana,Geneva,sans-serif; font-weight: bold;'><td style='padding: 10px;'>Video Catrgory</td><td>$v_category</td></tr>";
-                $message .= "<tr style='background-color: #CFF0FF; color: #405159; font-family:Verdana,Geneva,sans-serif; font-weight: bold;'><td style='padding: 10px;'>Video Content</td><td>$v_content</td></tr>";
+                $message .= "<tr style='background-color: #CFF0FF; color: #405159; font-family:Verdana,Geneva,sans-serif; font-weight: bold;'><td style='padding: 10px;'>Contact Name</td><td>$p_name</td></tr>";
                 $message .= "<tr style='color: #405159; font-family:Verdana,Geneva,sans-serif; font-weight: bold;'><td style='padding: 10px;'>Phone Number</td><td>$c_phone</td></tr>";
                 $message .= "<tr style='background-color: #CFF0FF; color: #405159; font-family:Verdana,Geneva,sans-serif; font-weight: bold;'><td style='padding: 10px;'>Budget</td><td>$c_budget</td></tr>";
-                $message .= "<tr style='color: #405159; font-family:Verdana,Geneva,sans-serif; font-weight: bold;'><td style='padding: 10px;'>How you found us:</td><td style='max-width:200px!important;'>$c_know</td></tr>";
+                $message .= "<tr style='color: #405159; font-family:Verdana,Geneva,sans-serif; font-weight: bold;'><td style='padding: 10px;'> How you found us:</td><td style='max-width:200px!important;'>$c_know</td></tr>";
                 $message .= "<tr style='background-color: #CFF0FF; color: #405159; font-family:Verdana,Geneva,sans-serif; font-weight: bold;'><td style='padding: 10px;'>Additional Details</td><td style='max-width:200px!important;'>$c_details</td></tr>";
                 $message .= "<tr><th colspan=2 style='background-color: #CFF0FF; color: #405159; padding: 20px; font-family:Verdana,Geneva,sans-serif; font-weight: bold; font-size: 20px;'>Thank You For Contacting Us!</th></tr>";
                 $message .= "</table>";
@@ -49,12 +42,12 @@ if (isset($_POST["contact_submit"])){
                 </style>';
                                 
                 echo '<script language="javascript">';
-                echo 'window.location.href="index.php";';
+                echo 'window.location.href="index.html";';
                 echo '</script>';
     
 }
 
-if (isset($_POST["submit2"])){
+if (isset($_POST["submit_news"])){
     
         include('connection.php');
     

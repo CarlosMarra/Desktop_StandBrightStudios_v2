@@ -11,12 +11,27 @@ $(document).ready(function() {
 
   	});
 
-  	$(".masked_image").click(function() {
-		  	$(".masked_imaging").addClass('hide');
-		  	$(".revealed_video").removeClass('hide');
-			document.getElementById('revealed_video').src = "https://player.vimeo.com/video/128739721?color=ff005a&title=0&byline=0&portrait=0&autoplay=1";
+  //	$(".masked_image").click(function() {
+	//	  	$(".masked_imaging").addClass('hide');
+	//	  	$(".revealed_video").removeClass('hide');
+	//		document.getElementById('revealed_video').src = "https://player.vimeo.com/video/128739721?color=ff005a&title=0&byline=0&portrait=0&autoplay=1";
+//
+//});
 
-  	});
+var iframe = document.getElementById('revealed_video');
+
+// $f == Froogaloop
+var player = $f(iframe);
+
+// bind events
+var playButton = document.getElementById("masked_image");
+playButton.addEventListener("click", function() {
+ 		  	$(".masked_imaging").addClass('hide');
+		  	$(".revealed_video").removeClass('hide');
+  player.api("play");
+});
+
+
 
 	var complete = screen.width;
 	
@@ -50,15 +65,6 @@ $(document).ready(function() {
 	
 	$("#contact_submit").validate({
 			rules:{
-				artistic_style:{
-					required: true
-				},
-				video_category:{
-					required: true
-				},
-				video_content:{
-					required: true
-				},
 				person_name:{
 					required: true,
 					minlength: 2
@@ -88,9 +94,6 @@ $(document).ready(function() {
 			},
 			messages:{
 
-				artistic_style: "Please Choose a style.",
-				video_category: "Please Choose a category.",
-				video_content: "Please Choose a type of content.",
 				person_name: "Please provide a valid name",
 				company_name: "Enter a valid Company Name",				
 				company_number: "Valid # Required",
@@ -104,7 +107,7 @@ $(document).ready(function() {
 			},
 	});
 	
-	$("#form2").validate({
+	$("#news_submit").validate({
 			rules:{
 				mail:{
 					required: true,
@@ -119,15 +122,17 @@ $(document).ready(function() {
 			},
 	});
 		
-        $('#submit').ajaxForm(function() { 
-			$('.template_contact_menus').val("");
-			alert("Thank you for contacting us. Have a great day!");
-        });
+    $('#contact_submit').ajaxForm(function() { 
+			
+		$('.template_contact_menus').val("");
+		$('.template_contact_text2').val("");
+		alert("Thank you for contacting us. Have a great day!");
+    });
 
-        $('#form2').ajaxForm(function() { 
-		$('#mail').val("");
+    $('#news_submit').ajaxForm(function() { 
+		$('.template_newsletter_info_email').val("");
 		alert("Thank you for subscribing. Have a nice day!");
-        }); 	
+    }); 	
 
 
 
@@ -143,6 +148,8 @@ setInterval(function () {
 
 	$("html").css("min-width", m_width);
 	$("body").css("min-width", m_width);
+	$(".template_front_left").css("min-height", b_height);
+	$(".template_front_right").css("min-height", b_height);
 
 	if (m_width > c_width) {
 		$("html").css("overflow-x", "scroll");
@@ -150,8 +157,6 @@ setInterval(function () {
 	if (m_width == c_width) {
 		$("html").css("overflow-x", "hidden");
 	}      
-
-	console.log($('.bxslider').css('transform'));
 
 if (($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -7652, 0)') ||
 	($('.bxslider').css('transform') === 'matrix(1, 0, 0, 1, -6692, 0)') ||
@@ -178,7 +183,7 @@ setInterval(function () {
 	var b_height = screen.height;
 	var x = $('.template_icons_step_stones').offset().top;
 	var y = x - b_height;
-	if ( y < -500 && canSee === false){
+	if ( y < -600 && canSee === false){
 	canSee = true;
 
 		      	$( ".template_icons_step_stones1" ).animate({		//aniamtes "dragged out" slides back into position with new z-index values
@@ -226,7 +231,7 @@ setInterval(function () {
 			    	}
 	    		});
 	}
-	else if ( y >= -500 && canSee == true){
+	else if ( y >= -200 && canSee == true){
 			
 			canSee = false;
 
